@@ -4,23 +4,12 @@ import 'package:flutter_component/src/constants/string_constants.dart';
 
 class KText extends StatelessWidget {
   final String text;
-  final double? fontSize;
-  final String? fontFamily;
-  final FontWeight? fontWeight;
-  final double? letterSpacing;
-  final TextDecoration? textDecoration;
-  final int? fontColor;
+  final TextStyle? textStyle;
   final TextOverflow? textOverflow;
 
   const KText(
       {Key? key,
-      required this.text,
-      this.fontSize,
-      this.fontFamily,
-      this.fontWeight,
-      this.textDecoration,
-      this.fontColor,
-      this.letterSpacing,
+      required this.text, this.textStyle,
       this.textOverflow})
       : super(key: key);
 
@@ -29,13 +18,13 @@ class KText extends StatelessWidget {
     return Text(
       text,
       overflow: textOverflow ?? TextOverflow.clip,
-      style: Styles.textStyle(
-          fontSize: fontSize ?? 12.0,
-          fontFamily: fontFamily ?? Constants.inter,
-          fontWeight: fontWeight ?? FontWeight.normal,
-          decoration: textDecoration ?? TextDecoration.none,
-          letterSpacing: letterSpacing ?? 0.1,
-          fontColor: fontColor ?? Colors.black.value),
+      style: textStyle ?? KTextStyles.textStyle(
+          fontSize: 12.0,
+          fontFamily: Constants.inter,
+          fontWeight: FontWeight.normal,
+          decoration: TextDecoration.none,
+          letterSpacing: 0.1,
+          fontColor: Colors.black.value),
     );
   }
 }

@@ -14,18 +14,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        fontFamily: "Inter"
-      ),
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primarySwatch: Colors.blue,
+          fontFamily: "Inter"),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -97,15 +96,30 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const KText(
+            KButton(
+                text: "Press me hello world",
+                onPressed: () {},
+                textStyle: KTextStyles.textStyle(
+                    fontSize: 24, fontColor: Colors.white.value)),
+            const SizedBox(height: 24,),
+            KButton(
+                text: "Press me hello world",
+                onPressed: () {},
+                buttonStyle: KButtonStyle.buttonStyleBorder(buttonBgColor: Colors.white),
+                textStyle: KTextStyles.textStyle(
+                    fontSize: 24, fontColor: Colors.black.value)),
+            KText(
               text: 'You have pushed the button this many times:',
-              fontSize: 32,
-
+              textStyle: KTextStyles.textStyle(
+                fontSize: 32,
+              ),
             ),
-            const KText(
+            KText(
               text: 'You have pushed the button this many times:',
-              fontSize: 32,
-              fontFamily: "DancingScript",
+              textStyle: KTextStyles.textStyle(
+                fontSize: 32,
+                fontFamily: "DancingScript",
+              ),
             ),
             Text(
               '$_counter',
