@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
+        child: Wrap(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -94,18 +94,36 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const KAvatar(
+              imageUrl:
+                  "https://pbs.twimg.com/profile_images/803832195970433027/aaoG6PJI_400x400.jpg",
+              size: 124,
+              boxShape: BoxShape.rectangle,
+            ),
+            const SizedBox(height: 24),
+            const KAvatar(
+              imageUrl:
+              "assets/image/profile.jpeg",
+              size: 124,
+              boxShape: BoxShape.circle,
+            ),
+            const SizedBox(height: 24),
+
             KButton(
                 text: "Press me hello world",
                 onPressed: () {},
                 textStyle: KTextStyles.textStyle(
                     fontSize: 24, fontColor: Colors.white.value)),
-            const SizedBox(height: 24,),
+            const SizedBox(
+              height: 24,
+            ),
             KButton(
                 text: "Press me hello world",
                 onPressed: () {},
-                buttonStyle: KButtonStyle.buttonStyleBorder(buttonBgColor: Colors.white),
+                buttonStyle:
+                    KButtonStyle.buttonStyleBorder(buttonBgColor: Colors.white),
                 textStyle: KTextStyles.textStyle(
                     fontSize: 24, fontColor: Colors.black.value)),
             KText(
