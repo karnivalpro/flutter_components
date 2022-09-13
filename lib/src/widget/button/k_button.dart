@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component/flutter_component.dart';
-import 'package:flutter_component/src/widget/button/k_button_style.dart';
 
 class KButton extends StatelessWidget {
   final String text;

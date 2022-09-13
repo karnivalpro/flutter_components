@@ -104,20 +104,27 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 24),
             const KAvatar(
-              imageUrl:
-              "assets/image/profile.jpeg",
+              imageUrl: "assets/image/profile.jpeg",
               size: 124,
               boxShape: BoxShape.circle,
             ),
             const SizedBox(height: 24),
-
             KButton(
                 text: "Press me hello world",
                 onPressed: () {},
                 textStyle: KTextStyles.textStyle(
                     fontSize: 24, fontColor: Colors.white.value)),
             const SizedBox(
-              height: 24,
+              width: 24,
+            ),
+            KButtonLoading(
+                text: "Press me",
+                onPressed: () {},
+                isLoading: true,
+                textStyle: KTextStyles.textStyle(
+                    fontSize: 24, fontColor: Colors.white.value)),
+            const SizedBox(
+              width: 24,
             ),
             KButton(
                 text: "Press me hello world",
