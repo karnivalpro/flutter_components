@@ -33,9 +33,13 @@ class KButtonLoading extends StatelessWidget {
                   KTextStyles.textStyle(
                       fontSize: 12.0, fontColor: Colors.white.value),
             )
-          : CircularProgressIndicator(
-              color: loadingColor,
-              strokeWidth: 2,
+          : SizedBox(
+              height: 16,
+              width: 16,
+              child: CircularProgressIndicator(
+                color: loadingColor,
+                strokeWidth: 2,
+              ),
             ),
     );
   }
