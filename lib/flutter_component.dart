@@ -10,4 +10,7 @@ export 'src/widget/text_edit/k_text_edit_view.dart';
 export 'src/widget/text_edit/k_text_edit_view.dart';
 export 'src/widget/text_edit/k_password_field.dart';
 export 'src/widget/space/space_view.dart';
+export 'src/widget/otp_field/otp_field.dart';
+export 'src/widget/otp_field/otp_field_style.dart';
+export 'src/widget/otp_field/style.dart';
 

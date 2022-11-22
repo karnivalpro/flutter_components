@@ -16,5 +16,10 @@ class ColorConstants {
   static int get greyColorC6 => 0xffC6C6C6;
 
   static int get greyColor6F => 0xff6F6F6F;
+
   static int get redErrorColor => 0xffC20000;
+
+  static int get whiteLiteColor => 0xffFEFEFE;
+
+  static int get textBgGreyColor => 0x17464646;
 }
