@@ -5,15 +5,18 @@ class KButtonStyle {
       {Color? buttonBgColor,
       Size? minimumSize,
       Size? maximumSize,
-      Size? fixedSize}) {
+      Size? fixedSize,
+      OutlinedBorder? border}) {
     return ElevatedButton.styleFrom(
-      primary: buttonBgColor ?? Colors.blue, // button Background color
-      elevation: 12,
-      padding: const EdgeInsets.all(16),
-      fixedSize: fixedSize,
-      maximumSize: maximumSize,
-      minimumSize: minimumSize,
-    );
+        primary: buttonBgColor ?? Colors.blue,
+        elevation: 12,
+        padding: const EdgeInsets.all(16),
+        fixedSize: fixedSize,
+        maximumSize: maximumSize,
+        minimumSize: minimumSize,
+        shape: border ??
+            const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(6))));
   }
 
   static ButtonStyle buttonStyleBorder(
@@ -23,7 +26,8 @@ class KButtonStyle {
       Size? fixedSize,
       OutlinedBorder? border}) {
     return ElevatedButton.styleFrom(
-        primary: buttonBgColor ?? Colors.blue, // button Background color
+        primary: buttonBgColor ?? Colors.blue,
+        // button Background color
         elevation: 12,
         padding: const EdgeInsets.all(16),
         fixedSize: fixedSize,

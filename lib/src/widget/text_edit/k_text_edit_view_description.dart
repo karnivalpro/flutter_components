@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_component/flutter_component.dart';
 import 'package:flutter_component/src/constants/color_constants.dart';
 
-class KTextEditView extends StatefulWidget {
+class KTextEditViewDescription extends StatefulWidget {
   final String text;
   final TextEditingController? controller;
   final Function(String) onChange;
@@ -11,26 +11,31 @@ class KTextEditView extends StatefulWidget {
   final bool isValidation;
   final String? errorMessage;
   final String? validateRegex;
+  final int? maxLine;
+  final int? maxLength;
   final InputDecoration? inputDecoration;
 
-  const KTextEditView(
-      {Key? key,
-      required this.text,
-      this.controller,
-      required this.onChange,
-      this.onFinished,
-      this.textInputAction,
-      this.isValidation = false,
-      this.errorMessage,
-      this.validateRegex,
-      this.inputDecoration})
-      : super(key: key);
+  const KTextEditViewDescription({
+    Key? key,
+    required this.text,
+    this.controller,
+    required this.onChange,
+    this.onFinished,
+    this.textInputAction,
+    this.isValidation = false,
+    this.errorMessage,
+    this.validateRegex,
+    this.maxLength,
+    this.maxLine,
+    this.inputDecoration,
+  }) : super(key: key);
 
   @override
-  State<KTextEditView> createState() => _KTextEditViewState();
+  State<KTextEditViewDescription> createState() =>
+      _KTextEditViewDescriptionState();
 }
 
-class _KTextEditViewState extends State<KTextEditView> {
+class _KTextEditViewDescriptionState extends State<KTextEditViewDescription> {
   FocusNode focusNode = FocusNode();
   final _formKey = GlobalKey<FormState>();
 
@@ -53,6 +58,8 @@ class _KTextEditViewState extends State<KTextEditView> {
     return Form(
       key: _formKey,
       child: TextFormField(
+        maxLines: widget.maxLine,
+        maxLength: widget.maxLength,
         focusNode: focusNode,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,

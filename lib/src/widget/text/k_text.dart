@@ -5,11 +5,13 @@ import 'package:flutter_component/src/constants/string_constants.dart';
 class KText extends StatelessWidget {
   final String text;
   final TextStyle? textStyle;
+  final TextAlign? textAlign;
   final TextOverflow? textOverflow;
 
   const KText(
       {Key? key,
       required this.text, this.textStyle,
+        this.textAlign,
       this.textOverflow})
       : super(key: key);
 
@@ -17,6 +19,7 @@ class KText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      textAlign: textAlign ?? TextAlign.start,
       overflow: textOverflow ?? TextOverflow.clip,
       style: textStyle ?? KTextStyles.textStyle(
           fontSize: 12.0,
