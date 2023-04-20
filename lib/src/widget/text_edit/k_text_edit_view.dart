@@ -12,18 +12,18 @@ class KTextEditView extends StatefulWidget {
   final String? errorMessage;
   final String? validateRegex;
   final InputDecoration? inputDecoration;
+  final bool isEnabled;
 
-  const KTextEditView(
-      {Key? key,
-      required this.text,
-      this.controller,
-      required this.onChange,
-      this.onFinished,
-      this.textInputAction,
-      this.isValidation = false,
-      this.errorMessage,
-      this.validateRegex,
-      this.inputDecoration})
+  const KTextEditView({Key? key,
+    required this.text,
+    this.controller,
+    required this.onChange,
+    this.onFinished,
+    this.textInputAction,
+    this.isValidation = false,
+    this.errorMessage,
+    this.validateRegex,
+    this.inputDecoration, this.isEnabled = true})
       : super(key: key);
 
   @override
@@ -53,6 +53,7 @@ class _KTextEditViewState extends State<KTextEditView> {
     return Form(
       key: _formKey,
       child: TextFormField(
+        enabled: widget.isEnabled,
         focusNode: focusNode,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
@@ -70,7 +71,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         },
         decoration: widget.inputDecoration ?? InputDecoration(
           contentPadding:
-              const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+          const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
           border: OutlineInputBorder(
             borderSide: BorderSide(
               color: Color(ColorConstants.greyColorC6),
