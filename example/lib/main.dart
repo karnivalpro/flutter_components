@@ -76,25 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Wrap(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const KAvatar(
               imageUrl:
@@ -149,6 +133,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            KAvatarGroup(
+              agItems: [AGData(name: "Shivam Sharma", email: "shivam.sharma@karnival.com", imageSrc: "https://media.licdn.com/dms/image/D5603AQGy1guHaasKAg/profile-displayphoto-shrink_400_400/0/1671378198865?e=1689811200&v=beta&t=zoKf8yD-vinTssIMYOJg7Hrnes5A-yUWv4bZdGWD6EA"),
+                AGData(name: "Ayush Kumar", email: "ayush.kumar@karnival.com", imageSrc: "https://media.licdn.com/dms/image/C5603AQEv1RX1G-NSKw/profile-displayphoto-shrink_400_400/0/1620534945628?e=1689811200&v=beta&t=jNfGZf5V3vWM3B-d6BKjhBhWsA7j-MM5tL8B8679wiw"),
+                AGData(name: "Himanshu Jain", email: "himanshu.j@karnival.com", imageSrc: "https://media.licdn.com/dms/image/C5603AQFh4dZzGMoJZg/profile-displayphoto-shrink_400_400/0/1659903870815?e=1689811200&v=beta&t=K4M_zUqw6boC4cj223lFEVuBA0LU7pOdUJFMqyw31GQ"),
+                AGData(name: "Shivam Sharma", email: "shivam.sharma@karnival.com", imageSrc: "https://media.licdn.com/dms/image/D5603AQGy1guHaasKAg/profile-displayphoto-shrink_400_400/0/1671378198865?e=1689811200&v=beta&t=zoKf8yD-vinTssIMYOJg7Hrnes5A-yUWv4bZdGWD6EA")
+              ],
             ),
           ],
         ),
