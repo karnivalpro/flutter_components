@@ -10,7 +10,7 @@ class KTextEditView extends StatefulWidget {
   final TextInputAction? textInputAction;
   final bool isValidation;
   final String? errorMessage;
-  final RegExp? validateRegex;
+  final String? validateRegex;
   final InputDecoration? inputDecoration;
   final bool isEnabled;
 
@@ -59,7 +59,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         controller: widget.controller,
         validator: (value) {
           if (value != null) {
-            final regex = widget.validateRegex!;
+            final regex = RegExp(widget.validateRegex!);
             if (!regex.hasMatch(value)) {
               return widget.errorMessage ?? "";
             }
