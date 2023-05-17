@@ -162,7 +162,7 @@ class _OTPTextFieldState extends State<OTPTextField> {
                 borderRadius: BorderRadius.all(
                     Radius.circular(widget.outlineBorderRadius)),
                 border: Border.all(
-                    color: Color(ColorConstants.textBgGreyColor),
+                    color: widget.otpFieldStyle!.borderColor,
                     width: widget.borderWidth),
               ),
               child: TextField(
