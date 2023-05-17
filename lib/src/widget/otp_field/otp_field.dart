@@ -47,6 +47,8 @@ class OTPTextField extends StatefulWidget {
   /// Callback function, called when pin is completed.
   final ValueChanged<String>? onCompleted;
 
+  final double borderWidth;
+
   String pinData;
 
   OTPTextField(
@@ -64,6 +66,7 @@ class OTPTextField extends StatefulWidget {
       this.fieldStyle = FieldStyle.underline,
       this.onChanged,
       this.pinData = '',
+      this.borderWidth = 1,
       this.onCompleted})
       : assert(length > 1);
 
@@ -156,9 +159,11 @@ class _OTPTextFieldState extends State<OTPTextField> {
               padding: EdgeInsets.all(6),
               decoration: BoxDecoration(
                 color: Color(ColorConstants.whiteLiteColor),
-                borderRadius: BorderRadius.all(Radius.circular(widget.outlineBorderRadius)),
+                borderRadius: BorderRadius.all(
+                    Radius.circular(widget.outlineBorderRadius)),
                 border: Border.all(
-                    color: Color(ColorConstants.textBgGreyColor), width: 1),
+                    color: Color(ColorConstants.textBgGreyColor),
+                    width: widget.borderWidth),
               ),
               child: TextField(
                 controller: _textControllers[i],
