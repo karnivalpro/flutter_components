@@ -102,6 +102,7 @@ class _KTextEditViewDescriptionState extends State<KTextEditViewDescription> {
               width: 1,
             ),
           ),
+          alignLabelWithHint: true,
           label: KText(
             text: widget.text,
             textStyle: KTextStyles.textStyle(
