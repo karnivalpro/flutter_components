@@ -27,7 +27,7 @@ class KText extends StatelessWidget {
           fontWeight: FontWeight.normal,
           decoration: TextDecoration.none,
           letterSpacing: 0.1,
-          fontColor: Colors.black.value),
+          fontColor: Colors.black),
     );
   }
 }

@@ -97,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 text: "Press me hello world",
                 onPressed: () {},
                 textStyle: KTextStyles.textStyle(
-                    fontSize: 24, fontColor: Colors.white.value)),
+                    fontSize: 24, fontColor: Colors.white)),
             const SizedBox(
               width: 24,
             ),
@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {},
                 isLoading: true,
                 textStyle: KTextStyles.textStyle(
-                    fontSize: 24, fontColor: Colors.white.value)),
+                    fontSize: 24, fontColor: Colors.white)),
             const SizedBox(
               width: 24,
             ),
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 buttonStyle:
                     KButtonStyle.buttonStyleBorder(buttonBgColor: Colors.white),
                 textStyle: KTextStyles.textStyle(
-                    fontSize: 24, fontColor: Colors.black.value)),
+                    fontSize: 24, fontColor: Colors.black)),
             KText(
               text: 'You have pushed the button this many times:',
               textStyle: KTextStyles.textStyle(

@@ -31,7 +31,7 @@ class KButtonLoading extends StatelessWidget {
               text: text,
               textStyle: textStyle ??
                   KTextStyles.textStyle(
-                      fontSize: 12.0, fontColor: Colors.white.value),
+                      fontSize: 12.0, fontColor: Colors.white),
             )
           : SizedBox(
               height: 16,

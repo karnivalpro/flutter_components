@@ -99,7 +99,7 @@ class _KTextEditViewState extends State<KTextEditView> {
           label: KText(
             text: widget.text,
             textStyle: KTextStyles.textStyle(
-                fontSize: 12, fontColor: ColorConstants.greyColorC6),
+                fontSize: 12, fontColor: Color(ColorConstants.greyColorC6)),
           ),
         ),
       ),
