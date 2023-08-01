@@ -13,6 +13,7 @@ class KTextEditView extends StatefulWidget {
   final String? validateRegex;
   final InputDecoration? inputDecoration;
   final bool isEnabled;
+  final TextStyle? style;
 
   const KTextEditView({Key? key,
     required this.text,
@@ -23,7 +24,7 @@ class KTextEditView extends StatefulWidget {
     this.isValidation = false,
     this.errorMessage,
     this.validateRegex,
-    this.inputDecoration, this.isEnabled = true})
+    this.inputDecoration, this.isEnabled = true, this.style})
       : super(key: key);
 
   @override
@@ -57,6 +58,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         focusNode: focusNode,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
+        style: widget.style ?? KTextStyles.textStyle(),
         validator: (value) {
           if (value != null) {
             final regex = RegExp(widget.validateRegex!);

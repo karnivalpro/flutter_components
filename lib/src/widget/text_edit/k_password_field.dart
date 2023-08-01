@@ -5,9 +5,15 @@ import 'package:flutter_component/src/constants/color_constants.dart';
 class KPasswordField extends StatefulWidget {
   final String text;
   final Function(String) onChange;
+  final TextStyle? style;
   final TextEditingController? controller;
 
-  const KPasswordField({Key? key, required this.text, this.controller, required this.onChange})
+  const KPasswordField(
+      {Key? key,
+      required this.text,
+      this.controller,
+      required this.onChange,
+      this.style})
       : super(key: key);
 
   @override
@@ -27,8 +33,8 @@ class _KPasswordFieldState extends State<KPasswordField> {
     return TextFormField(
       controller: widget.controller,
       obscureText: obscureText,
-      validator: (v){
-        if(v == null){
+      validator: (v) {
+        if (v == null) {
           return "Please enter password";
         }
         return null;
@@ -36,6 +42,7 @@ class _KPasswordFieldState extends State<KPasswordField> {
       onChanged: (value) {
         widget.onChange.call(value);
       },
+      style: widget.style ?? KTextStyles.textStyle(),
       decoration: InputDecoration(
         suffixIcon: InkWell(
           onTap: () {
@@ -74,7 +81,8 @@ class _KPasswordFieldState extends State<KPasswordField> {
         label: KText(
           text: widget.text,
           textStyle: KTextStyles.textStyle(
-              fontSize: 12,),
+            fontSize: 12,
+          ),
         ),
       ),
     );
