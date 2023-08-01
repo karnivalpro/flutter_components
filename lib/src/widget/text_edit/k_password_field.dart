@@ -74,7 +74,7 @@ class _KPasswordFieldState extends State<KPasswordField> {
         label: KText(
           text: widget.text,
           textStyle: KTextStyles.textStyle(
-              fontSize: 12, fontColor: Color(ColorConstants.greyColorC6)),
+              fontSize: 12,),
         ),
       ),
     );
