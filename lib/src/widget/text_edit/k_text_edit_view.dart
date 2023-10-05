@@ -14,8 +14,9 @@ class KTextEditView extends StatefulWidget {
   final InputDecoration? inputDecoration;
   final bool isEnabled;
   final TextStyle? style;
+  final ValueChanged<String>? onFieldSubmitted;
 
-  const KTextEditView({Key? key,
+   const KTextEditView({Key? key,
     required this.text,
     this.controller,
     required this.onChange,
@@ -24,7 +25,7 @@ class KTextEditView extends StatefulWidget {
     this.isValidation = false,
     this.errorMessage,
     this.validateRegex,
-    this.inputDecoration, this.isEnabled = true, this.style})
+    this.inputDecoration, this.isEnabled = true, this.style, this.onFieldSubmitted})
       : super(key: key);
 
   @override
@@ -58,6 +59,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         focusNode: focusNode,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
+        onFieldSubmitted: widget.onFieldSubmitted,
         style: widget.style ?? KTextStyles.textStyle(),
         validator: (value) {
           if (value != null) {
