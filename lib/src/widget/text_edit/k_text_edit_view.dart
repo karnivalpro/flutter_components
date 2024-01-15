@@ -17,6 +17,7 @@ class KTextEditView extends StatefulWidget {
   final ValueChanged<String>? onFieldSubmitted;
   final bool autoFocus;
   final TextInputType? keyboardType;
+  final int? maxLength;
 
   const KTextEditView({Key? key,
     required this.text,
@@ -31,7 +32,9 @@ class KTextEditView extends StatefulWidget {
     this.isEnabled = true,
     this.style,
     this.onFieldSubmitted,
-    this.autoFocus = false, this.keyboardType})
+    this.autoFocus = false,
+    this.keyboardType,
+    this.maxLength})
       : super(key: key);
 
   @override
@@ -64,6 +67,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         enabled: widget.isEnabled,
         focusNode: focusNode,
         autofocus: widget.autoFocus,
+        maxLength: widget.maxLength,
         keyboardType: widget.keyboardType,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
