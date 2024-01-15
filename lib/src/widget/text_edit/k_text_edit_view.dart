@@ -15,8 +15,9 @@ class KTextEditView extends StatefulWidget {
   final bool isEnabled;
   final TextStyle? style;
   final ValueChanged<String>? onFieldSubmitted;
+  final bool autoFocus;
 
-   const KTextEditView({Key? key,
+  const KTextEditView({Key? key,
     required this.text,
     this.controller,
     required this.onChange,
@@ -25,7 +26,11 @@ class KTextEditView extends StatefulWidget {
     this.isValidation = false,
     this.errorMessage,
     this.validateRegex,
-    this.inputDecoration, this.isEnabled = true, this.style, this.onFieldSubmitted})
+    this.inputDecoration,
+    this.isEnabled = true,
+    this.style,
+    this.onFieldSubmitted,
+    this.autoFocus = false})
       : super(key: key);
 
   @override
@@ -57,6 +62,7 @@ class _KTextEditViewState extends State<KTextEditView> {
       child: TextFormField(
         enabled: widget.isEnabled,
         focusNode: focusNode,
+        autofocus: widget.autoFocus,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
         onFieldSubmitted: widget.onFieldSubmitted,
@@ -103,7 +109,7 @@ class _KTextEditViewState extends State<KTextEditView> {
           label: KText(
             text: widget.text,
             textStyle: KTextStyles.textStyle(
-                fontSize: 16,),
+              fontSize: 16,),
           ),
         ),
       ),
