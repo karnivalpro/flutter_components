@@ -68,6 +68,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         focusNode: focusNode,
         autofocus: widget.autoFocus,
         maxLength: widget.maxLength,
+
         keyboardType: widget.keyboardType,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
@@ -88,6 +89,7 @@ class _KTextEditViewState extends State<KTextEditView> {
         decoration: widget.inputDecoration ?? InputDecoration(
           contentPadding:
           const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+          counter: Container(),
           border: OutlineInputBorder(
             borderSide: BorderSide(
               color: Color(ColorConstants.greyColorC6),
