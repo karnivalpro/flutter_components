@@ -13,6 +13,7 @@ class KTextEditViewDescription extends StatefulWidget {
   final String? validateRegex;
   final int? maxLine;
   final int? maxLength;
+  final TextInputType? keyboardType;
   final InputDecoration? inputDecoration;
 
   const KTextEditViewDescription({
@@ -28,6 +29,7 @@ class KTextEditViewDescription extends StatefulWidget {
     this.maxLength,
     this.maxLine,
     this.inputDecoration,
+    this.keyboardType
   }) : super(key: key);
 
   @override
@@ -61,6 +63,7 @@ class _KTextEditViewDescriptionState extends State<KTextEditViewDescription> {
         maxLines: widget.maxLine,
         maxLength: widget.maxLength,
         focusNode: focusNode,
+        keyboardType: widget.keyboardType,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,
         validator: (value) {
