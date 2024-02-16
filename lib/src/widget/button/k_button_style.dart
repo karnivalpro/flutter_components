@@ -8,7 +8,7 @@ class KButtonStyle {
       Size? fixedSize,
       OutlinedBorder? border}) {
     return ElevatedButton.styleFrom(
-        primary: buttonBgColor ?? Colors.blue,
+        backgroundColor: buttonBgColor ?? Colors.blue,
         elevation: 12,
         padding: const EdgeInsets.all(16),
         fixedSize: fixedSize,
@@ -26,7 +26,7 @@ class KButtonStyle {
       Size? fixedSize,
       OutlinedBorder? border}) {
     return ElevatedButton.styleFrom(
-        primary: buttonBgColor ?? Colors.blue,
+        backgroundColor: buttonBgColor ?? Colors.blue,
         // button Background color
         elevation: 12,
         padding: const EdgeInsets.all(16),
