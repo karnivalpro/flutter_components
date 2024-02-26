@@ -68,7 +68,6 @@ class _KTextEditViewState extends State<KTextEditView> {
         focusNode: focusNode,
         autofocus: widget.autoFocus,
         maxLength: widget.maxLength,
-
         keyboardType: widget.keyboardType,
         textInputAction: widget.textInputAction ?? TextInputAction.none,
         controller: widget.controller,

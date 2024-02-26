@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             KAvatarGroup(
               agItems: [AGData(name: "Shivam Sharma", email: "shivam.sharma@karnival.com", imageSrc: "https://media.licdn.com/dms/image/D5603AQGy1guHaasKAg/profile-displayphoto-shrink_400_400/0/1671378198865?e=1689811200&v=beta&t=zoKf8yD-vinTssIMYOJg7Hrnes5A-yUWv4bZdGWD6EA"),
@@ -141,6 +141,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 AGData(name: "Shivam Sharma", email: "shivam.sharma@karnival.com", imageSrc: "https://media.licdn.com/dms/image/D5603AQGy1guHaasKAg/profile-displayphoto-shrink_400_400/0/1671378198865?e=1689811200&v=beta&t=zoKf8yD-vinTssIMYOJg7Hrnes5A-yUWv4bZdGWD6EA")
               ],
             ),
+            SizedBox(
+                width: 450,
+                height: 250,
+                child: KCalendarView()),
+            const AnimatedAlignWidget()
+
           ],
         ),
       ),

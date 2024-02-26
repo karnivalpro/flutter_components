@@ -7,8 +7,12 @@ class KAvatarGroup extends StatelessWidget {
   double? avatarSize;
   double? avatarSpacing;
 
-
-  KAvatarGroup({Key? key, required this.agItems, this.onClickItem, this.avatarSize = 32,this.avatarSpacing = 20})
+  KAvatarGroup(
+      {Key? key,
+      required this.agItems,
+      this.onClickItem,
+      this.avatarSize = 32,
+      this.avatarSpacing = 20})
       : super(key: key);
 
   @override
