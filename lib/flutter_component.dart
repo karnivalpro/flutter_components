@@ -15,6 +15,6 @@ export 'src/widget/otp_field/otp_field.dart';
 export 'src/widget/otp_field/otp_field_style.dart';
 export 'src/widget/otp_field/style.dart';
 export 'src/widget/calendar/k_calendar_view.dart';
-export 'src/widget/animation/animated_align_widget.dart';
+// export 'src/widget/animation/animated_align_widget.dart';
 export 'src/widget/badge/k_badge.dart';
 
