@@ -145,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 450,
                 height: 250,
                 child: KCalendarView()),
-            const AnimatedAlignWidget(),
+            // const AnimatedAlignWidget(),
             const KBadge(value: '8',kBadgeType: KBadgeType.normal,),
             const SpaceView(width: 12,),
             const KBadge(value: '8200002020',kBadgeType: KBadgeType.primary,),
